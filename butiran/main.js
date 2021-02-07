@@ -1,8 +1,8 @@
 /*
-	butiran.js
+	main.js
 	Simulation for granular particles system
 	
-	Sparisoma Viridi | dudung@gmail.com
+	Sparisoma Viridi | https://github.com/dudung
 	
 	Execute:
 	node main.js
@@ -77,104 +77,35 @@
 	0805 Done and webpack works as usual.
 	0903 Add veio in lib/ui.
 	
+	20210207
+	0951 Recreate in butiran-js repository at Github.
+	
 	References
 	1. url https://www.competa.com/blog/how-to-run-npm
 	   -without-sudo/ [20190617].
 */
 
-// lib
-var Grain = require('./lib/grain')();
-var Style = require('./lib/style');
-var Vect3 = require('./lib/vect3')();
-var Box = require('./lib/box')();
-
-// lib/color
-var RGB = require('./lib/color/rgb');
-
-// lib/force
-var Buoyant = require('./lib/force/buoyant')();
-var Drag = require('./lib/force/drag')();
-var Electrostatic = require('./lib/force/electrostatic')();
-var Gravitational = require('./lib/force/gravitational')();
-var Magnetic = require('./lib/force/magnetic')();
-var Normal = require('./lib/force/normal')();
-var Spring = require('./lib/force/spring')();
-
-// lib/generator
-var Generator = require('./lib/generator/generator')();
-var Random = require('./lib/generator/random');
-var Sequence = require('./lib/generator/sequence')();
-var Timer = require('./lib/generator/timer')();
-var Sample = require('./lib/generator/sample')();
-
-// lib/grid
-var Tablet = require('./lib/grid/tablet');
-var Pile = require('./lib/grid/pile')();
-
-// lib/math
-var Integration = require('./lib/math/integration');
-var Polynomial = require('./lib/math/polynomial')();
-var Transformation = require('./lib/math/transformation');
-var Path = require('./lib/math/path')();
-
-// lib/data
-var Points = require('./lib/data/points')();
-
-// lib/ui
-var TabText = require('./lib/ui/tabtext.js');
-var TabCanvas = require('./lib/ui/tabcanvas.js');
-var Parse = require('./lib/ui/parse.js');
-var Tabs = require('./lib/ui/tabs.js')();
-var Bgroup = require('./lib/ui/bgroup.js')();
-var Veio = require('./lib/ui/veio.js');
+// Require base module
+var Vect3 = require('./vect3')();
 
 // Store information 
 if(typeof window !== 'undefined') {
 	// Store to window object -- 20180519.2358
 	
-	// lib
-	window["Grain"] = Grain;
-	window["Style"] = Style;
+	// lib -- previously
 	window["Vect3"] = Vect3;
-	window["Box"] = Box;
-	
-	// lib/color
-	window["RGB"] = RGB;
-	
-	// lib/force
-	window["Buoyant"] = Buoyant;
-	window["Drag"] = Drag;
-	window["Electrostatic"] = Electrostatic;
-	window["Gravitational"] = Gravitational;
-	window["Magnetic"] = Magnetic;
-	window["Normal"] = Normal;
-	window["Spring"] = Spring;
-	
-	// lib/generator
-	window["Generator"] = Generator;
-	window["Random"] = Random;
-	window["Sequence"] = Sequence;
-	window["Timer"] = Timer;
-	window["Sample"] = Sample;
-	
-	// lib/grid
-	window["Tablet"] = Tablet;
-	window["Pile"] = Pile;
-	
-	// lib/math
-	window["Path"] = Path;
-	window["Polynomial"] = Polynomial;
-	window["Integration"] = Integration;
-	window["Transformation"] = Transformation;
-	
-	// lib/data/points
-	window["Points"] = Points;
-	
-	// lib/ui
-	window["TabText"] = TabText;
-	window["TabCanvas"] = TabCanvas;
-	window["Parse"] = Parse;
-	window["Tabs"] = Tabs;
-	window["Bgroup"] = Bgroup;
-	window["Veio"] = Veio;
 }
+
+
+// Export module -- 20180527.1515 ok
+module.exports = function() {
+	return Vect3;
+};
+
+
+module.exports = {
+	Vect3: function() {
+		return Vect3;
+	},
+};
+
