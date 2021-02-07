@@ -2,7 +2,7 @@
 Notes of the version and other things
 
 
-## Version 0.0.1 (2021-02-07)
+## Version 0.0.2 (2021-02-07)
 `url` <https://www.npmjs.com/package/butiran/v/0.0.2>
 
 ### Try test file
