@@ -79,6 +79,7 @@
 	
 	20210207
 	0951 Recreate in butiran-js repository at Github.
+	1009 Finally can initialize a Vect3 instance.
 	
 	References
 	1. url https://www.competa.com/blog/how-to-run-npm
@@ -97,12 +98,7 @@ if(typeof window !== 'undefined') {
 }
 
 
-// Export module -- 20180527.1515 ok
-module.exports = function() {
-	return Vect3;
-};
-
-
+// Export module -- 20180527.1515 ok, 20210207 ok
 module.exports = {
 	Vect3: function() {
 		return Vect3;
