@@ -1,0 +1,25 @@
+{
+  "name": "butiran",
+  "version": "0.0.2",
+  "description": "Node package for simulation of grain-based system",
+  "main": "main.js",
+  "scripts": {
+    "test": "node tests/vect3_tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dudung/butiran-js.git"
+  },
+  "keywords": [
+    "butiran",
+    "md",
+    "abm",
+    "js"
+  ],
+  "author": "Sparisoma Viridi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dudung/butiran-js/issues"
+  },
+  "homepage": "https://github.com/dudung/butiran-js#readme"
+}
